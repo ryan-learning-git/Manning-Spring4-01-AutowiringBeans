@@ -20,6 +20,8 @@ public class CDPlayerTest {
 
     @Autowired private CompactDisc cd;
 
+    @Autowired private BlankDisc blankDisc;
+
     @Autowired private MediaPlayer player;
 
     @Test
@@ -33,5 +35,13 @@ public class CDPlayerTest {
         assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band" +
             " by The Beatles\n", log.getLog());
     }
+
+    @Test
+    public void playBlankDisk(){
+        blankDisc.play();
+        assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band" +
+                " by The Beatles\n", log.getLog());
+    }
+
 
 }
